@@ -122,3 +122,4 @@ C:\Users\pasto\Documents\DeepSeaIntelligence\obj\Debug\net8.0\DeepSeaIntelligenc
 C:\Users\pasto\Documents\DeepSeaIntelligence\obj\Debug\net8.0\ref\DeepSeaIntelligence.dll
 C:\Users\pasto\Documents\DeepSeaIntelligence\bin\Debug\net8.0\Npgsql.dll
 C:\Users\pasto\Documents\DeepSeaIntelligence\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\pasto\Documents\DeepSeaIntelligence\obj\Debug\net8.0\DeepSeaIntelligence.sourcelink.json

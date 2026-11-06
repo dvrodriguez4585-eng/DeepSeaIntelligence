@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DeepSeaIntelligence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f352f31705b657c036ceb49fc5e350c4da64c5db")]
 [assembly: System.Reflection.AssemblyProductAttribute("DeepSeaIntelligence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DeepSeaIntelligence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
