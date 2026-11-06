@@ -17,7 +17,24 @@ namespace DeepSeaIntelligence.Controllers
         }
 
         public async Task<IActionResult> Index()
-            => View(await _db.Conservaciones.Include(c => c.Recepcion).OrderByDescending(c => c.IdConservacion).ToListAsync());
+        {
+            var conservaciones = await _db.Conservaciones
+                .AsNoTracking()
+                .OrderByDescending(c => c.IdConservacion)
+                .ToListAsync();
+
+            var productos = await _db.Productos
+                .AsNoTracking()
+                .ToDictionaryAsync(p => p.IdRecepcion);
+
+            foreach (var c in conservaciones)
+            {
+                if (productos.TryGetValue(c.IdRecepcion, out var p))
+                    c.Recepcion = p;
+            }
+
+            return View(conservaciones);
+        }
 
         public IActionResult Create() { CargarProductos(); return View(new Conservacion()); }
 
