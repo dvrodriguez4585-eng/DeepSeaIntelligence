@@ -1,0 +1,30 @@
+@model IEnumerable<DeepSeaIntelligence.Models.Conservacion>
+@{ ViewData["Title"] = "Conservación"; }
+
+<h2>Control de Conservación</h2>
+<a class="btn btn-dark mb-3" asp-action="Create">+ Nuevo registro</a>
+
+<div class="table-responsive">
+<table class="table table-bordered">
+    <thead class="table-light">
+        <tr><th>ID</th><th>Producto</th><th>Método</th><th>Temperatura</th><th>Fecha</th><th>Responsable</th><th></th></tr>
+    </thead>
+    <tbody>
+    @foreach (var c in Model)
+    {
+        <tr>
+            <td>@c.IdConservacion</td>
+            <td>@c.Recepcion?.ProductoRecibido</td>
+            <td>@c.MetodoConservacion</td>
+            <td>@c.Temperatura °C</td>
+            <td>@c.FechaConservacion.ToString("dd/MM/yyyy")</td>
+            <td>@c.Responsable</td>
+            <td class="text-nowrap">
+                <a class="btn btn-sm btn-outline-primary" asp-action="Edit" asp-route-id="@c.IdConservacion">Editar</a>
+                <a class="btn btn-sm btn-outline-danger" asp-action="Delete" asp-route-id="@c.IdConservacion" onclick="return confirm('¿Eliminar?')">Eliminar</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,47 @@
+@model IEnumerable<DeepSeaIntelligence.Models.ProductoMarino>
+@{
+    ViewData["Title"] = "Productos marinos";
+    var rechazados = (HashSet<int>)ViewBag.Rechazados;
+}
+
+<h2>Gestión de Productos Marinos</h2>
+
+<form method="get" class="d-flex gap-2 mb-3">
+    <input name="buscar" class="form-control" placeholder="Buscar producto..." />
+    <button class="btn btn-outline-dark">Buscar</button>
+    <a class="btn btn-dark text-nowrap" asp-action="Create">+ Nuevo</a>
+</form>
+
+<div class="table-responsive">
+<table class="table table-bordered">
+    <thead class="table-light">
+        <tr><th>ID</th><th>Producto</th><th>Peso</th><th>Fecha</th><th>Proveedor</th><th>Observación</th><th>QR</th><th></th></tr>
+    </thead>
+    <tbody>
+    @foreach (var p in Model)
+    {
+        bool rech = rechazados.Contains(p.IdRecepcion);
+        <tr class="@(rech ? "table-danger" : "")">
+            <td>@p.IdRecepcion</td>
+            <td>@p.ProductoRecibido</td>
+            <td>@p.Peso kg</td>
+            <td>
+                @if (p.FechaCaptura != null) { <span>Captura: @p.FechaCaptura.Value.ToString("dd/MM/yyyy")</span> }
+                else if (p.FechaIngreso != null) { <span>Ingreso: @p.FechaIngreso.Value.ToString("dd/MM/yyyy")</span> }
+            </td>
+            <td>@p.NombreProveedor</td>
+            <td>
+                @if (rech) { <div class="text-danger fw-bold"> Rechazado por calidad no se almacena ni se vende</div> }
+                @p.Observaciones
+            </td>
+            <td><a href="/Trazabilidad/Ver/@p.CodigoQR" target="_blank"><img src="/Trazabilidad/Qr/@p.CodigoQR" width="90" /></a></td>
+            <td class="text-nowrap">
+                <a class="btn btn-sm btn-outline-primary" asp-action="Edit" asp-route-id="@p.IdRecepcion">Editar</a>
+                <a class="btn btn-sm btn-outline-danger" asp-action="Delete" asp-route-id="@p.IdRecepcion"
+                   onclick="return confirm('¿Eliminar?')">Eliminar</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+</div>

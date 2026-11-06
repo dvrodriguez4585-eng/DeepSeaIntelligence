@@ -1,0 +1,29 @@
+@model IEnumerable<DeepSeaIntelligence.Models.Venta>
+@{ ViewData["Title"] = "Ventas"; }
+
+<h2>Gestión de Ventas</h2>
+<a class="btn btn-dark mb-3" asp-action="Create">+ Registrar venta</a>
+
+<div class="table-responsive">
+<table class="table table-bordered">
+    <thead class="table-light">
+        <tr><th>ID</th><th>Producto</th><th>Cantidad</th><th>Precio unit.</th><th>Total</th><th>Fecha</th><th>Cliente</th><th>Pago</th><th></th></tr>
+    </thead>
+    <tbody>
+    @foreach (var v in Model)
+    {
+        <tr>
+            <td>@v.IdVenta</td>
+            <td>@v.Recepcion?.ProductoRecibido</td>
+            <td>@v.CantidadVendida kg</td>
+            <td>@v.PrecioUnitario.ToString("N0")</td>
+            <td>@v.PrecioTotal.ToString("N0")</td>
+            <td>@v.FechaVenta.ToString("dd/MM/yyyy")</td>
+            <td>@v.Cliente?.NombreCliente</td>
+            <td>@v.MetodoPago</td>
+            <td><a class="btn btn-sm btn-outline-danger" asp-action="Delete" asp-route-id="@v.IdVenta" onclick="return confirm('¿Eliminar?')">Eliminar</a></td>
+        </tr>
+    }
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,22 @@
+@model DeepSeaIntelligence.Models.Venta
+@{ ViewData["Title"] = "Registrar venta"; }
+
+<h2>Registrar venta</h2>
+
+<form method="post" class="row g-3" style="max-width:700px">
+    <div asp-validation-summary="ModelOnly" class="text-danger col-12"></div>
+    <div class="col-12"><label class="form-label">Producto</label>
+        <select asp-for="IdRecepcion" asp-items="(SelectList)ViewBag.Productos" class="form-select"><option value="">Seleccionar...</option></select></div>
+    <div class="col-12"><label class="form-label">Cliente</label>
+        <select asp-for="IdCliente" asp-items="(SelectList)ViewBag.Clientes" class="form-select"><option value="">Seleccionar...</option></select></div>
+    <div class="col-md-6"><label class="form-label">Cantidad (kg)</label><input asp-for="CantidadVendida" class="form-control" /></div>
+    <div class="col-md-6"><label class="form-label">Precio unitario</label><input asp-for="PrecioUnitario" class="form-control" /></div>
+    <div class="col-md-6"><label class="form-label">Fecha</label><input asp-for="FechaVenta" type="date" class="form-control" /></div>
+    <div class="col-md-6"><label class="form-label">Método de pago</label>
+        <select asp-for="MetodoPago" class="form-select"><option>Efectivo</option><option>Transferencia</option><option>Tarjeta</option></select></div>
+    <div class="col-12"><label class="form-label">Observaciones</label><textarea asp-for="Observaciones" class="form-control"></textarea></div>
+    <div class="col-12">
+        <a class="btn btn-outline-dark" asp-action="Index">Cancelar</a>
+        <button class="btn btn-dark">Registrar venta</button>
+    </div>
+</form>

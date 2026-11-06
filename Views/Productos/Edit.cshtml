@@ -1,0 +1,26 @@
+@model DeepSeaIntelligence.Models.ProductoMarino
+@{ ViewData["Title"] = "Editar producto"; }
+
+<h2>Editar producto</h2>
+
+<form method="post" class="row g-3" style="max-width:700px">
+    <input type="hidden" asp-for="IdRecepcion" />
+    <input type="hidden" asp-for="CodigoQR" />
+
+    <div class="col-md-6"><label class="form-label">Producto recibido</label><input asp-for="ProductoRecibido" class="form-control" /></div>
+    <div class="col-md-6"><label class="form-label">Peso (kg)</label><input asp-for="Peso" class="form-control" /></div>
+    <div class="col-md-6"><label class="form-label">Tipo de fecha</label>
+        <select asp-for="TipoFecha" class="form-select"><option value="Captura">Fecha de captura</option><option value="Ingreso">Fecha de ingreso</option></select></div>
+    <div class="col-md-6"><label class="form-label">Fecha</label><input asp-for="Fecha" type="date" class="form-control" /></div>
+    <div class="col-md-6"><label class="form-label">Lugar de origen</label><input asp-for="LugarOrigen" class="form-control" /></div>
+    <div class="col-md-6"><label class="form-label">Tipo de proveedor</label>
+        <select asp-for="TipoProveedor" class="form-select"><option>Pescador</option><option>Criadero</option></select></div>
+    <div class="col-md-6"><label class="form-label">Nombre del proveedor</label><input asp-for="NombreProveedor" class="form-control" /></div>
+    <div class="col-md-6"><label class="form-label">Teléfono</label><input asp-for="TelefonoProveedor" class="form-control" /></div>
+    <div class="col-md-6"><label class="form-label">Correo</label><input asp-for="EmailProveedor" class="form-control" /></div>
+    <div class="col-12"><label class="form-label">Observaciones</label><textarea asp-for="Observaciones" class="form-control"></textarea></div>
+    <div class="col-12">
+        <a class="btn btn-outline-dark" asp-action="Index">Cancelar</a>
+        <button class="btn btn-dark">Guardar cambios</button>
+    </div>
+</form>

@@ -1,0 +1,19 @@
+@model DeepSeaIntelligence.Models.Comercializacion
+@{ ViewData["Title"] = "Nueva comercialización"; }
+
+<h2>Nueva comercialización</h2>
+
+<form method="post" class="row g-3" style="max-width:700px">
+    <div class="col-12"><label class="form-label">Venta</label>
+        <select asp-for="IdVenta" asp-items="(SelectList)ViewBag.Ventas" class="form-select"><option value="">Seleccionar...</option></select></div>
+    <div class="col-md-6"><label class="form-label">Canal de venta</label>
+        <select asp-for="CanalVenta" class="form-select"><option>Local</option><option>Distribuidores</option><option>Exportación</option></select></div>
+    <div class="col-md-6"><label class="form-label">Destino</label><input asp-for="Destino" class="form-control" /></div>
+    <div class="col-md-6"><label class="form-label">Fecha</label><input asp-for="FechaComercializacion" type="date" class="form-control" /></div>
+    <div class="col-md-6"><label class="form-label">Responsable</label><input asp-for="Responsable" class="form-control" /></div>
+    <div class="col-12"><label class="form-label">Observaciones</label><textarea asp-for="Observaciones" class="form-control"></textarea></div>
+    <div class="col-12">
+        <a class="btn btn-outline-dark" asp-action="Index">Cancelar</a>
+        <button class="btn btn-dark">Guardar</button>
+    </div>
+</form>

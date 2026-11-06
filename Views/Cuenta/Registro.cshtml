@@ -1,0 +1,28 @@
+@model DeepSeaIntelligence.Controllers.RegistroVM
+@{ ViewData["Title"] = "Crear cuenta"; }
+
+<h1 class="text-center">Crear cuenta</h1>
+<p class="text-center text-muted mb-3">Regístrate para usar el sistema</p>
+
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-2"></div>
+
+    <div class="form-floating mb-3">
+        <input asp-for="Email" class="form-control" placeholder="Correo" autocomplete="username" />
+        <label asp-for="Email">Correo electrónico</label>
+        <span asp-validation-for="Email" class="text-danger small"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for="Password" class="form-control" placeholder="Contraseña" autocomplete="new-password" />
+        <label asp-for="Password">Contraseña (mín. 6, con número)</label>
+        <span asp-validation-for="Password" class="text-danger small"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for="Confirmar" class="form-control" placeholder="Confirmar" autocomplete="new-password" />
+        <label asp-for="Confirmar">Confirmar contraseña</label>
+        <span asp-validation-for="Confirmar" class="text-danger small"></span>
+    </div>
+    <button class="btn btn-primary w-100">Crear cuenta</button>
+</form>
+
+<p class="text-center mt-3 mb-0">¿Ya tienes cuenta? <a asp-action="Entrar">Inicia sesión</a></p>

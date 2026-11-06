@@ -1,0 +1,25 @@
+<nav class="nav flex-column">
+    <a class="nav-link" href="/">Inicio</a>
+    <a class="nav-link" href="/Productos">Productos</a>
+    <a class="nav-link" href="/Calidades">Calidad</a>
+    <a class="nav-link" href="/Conservaciones">Conservación</a>
+    <a class="nav-link" href="/Almacenamientos">Almacenamiento</a>
+    <a class="nav-link" href="/Inventarios">Inventario</a>
+    <a class="nav-link" href="/Clientes">Clientes</a>
+    <a class="nav-link" href="/Ventas">Ventas</a>
+    <a class="nav-link" href="/Comercializaciones">Comercialización</a>
+
+</nav>
+<hr />
+@if (User.Identity?.IsAuthenticated == true)
+{
+    <div class="small mb-2">👤 @User.Identity.Name</div>
+    <form method="post" asp-controller="Cuenta" asp-action="Salir">
+        <button class="btn btn-outline-light w-100">Cerrar sesión</button>
+    </form>
+}
+else
+{
+    <a class="btn btn-light w-100 mb-2" href="/Cuenta/Entrar">Entrar</a>
+    <a class="btn btn-outline-light w-100" href="/Cuenta/Registro">Registrarse</a>
+}

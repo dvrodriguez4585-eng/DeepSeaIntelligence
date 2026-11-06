@@ -1,0 +1,105 @@
+@model DeepSeaIntelligence.Models.ProductoMarino
+@{
+    ViewData["Title"] = "Trazabilidad";
+    Layout = null;
+    var cal = ViewBag.Calidad as DeepSeaIntelligence.Models.Calidad;
+    var con = ViewBag.Conservacion as DeepSeaIntelligence.Models.Conservacion;
+    var alm = ViewBag.Almacenamiento as DeepSeaIntelligence.Models.Almacenamiento;
+    bool adecuado = ViewBag.Adecuado;
+    var motivos = ViewBag.Motivos as List<string>;
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trazabilidad - DeepSea Intelligence</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body class="bg-light">
+<div class="container py-3" style="max-width:600px">
+    <h4 class="text-center fw-bold">DeepSea Intelligence</h4>
+    <p class="text-center text-muted">Trazabilidad del producto</p>
+
+    @if (adecuado)
+    {
+        <div class="alert alert-success text-center fs-5">✅ El producto se mantuvo en un ambiente adecuado</div>
+    }
+    else
+    {
+        <div class="alert alert-danger">
+            <strong>⚠️ No se puede confirmar un ambiente adecuado:</strong>
+            <ul class="mb-0">
+                @foreach (var m in motivos!)
+                {
+                    <li>@m</li>
+                }
+            </ul>
+        </div>
+    }
+
+    <div class="card mb-3">
+        <div class="card-header fw-bold">Origen</div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><b>Producto:</b> @Model.ProductoRecibido</li>
+            <li class="list-group-item"><b>Proveedor:</b> @Model.NombreProveedor (@Model.TipoProveedor)</li>
+            <li class="list-group-item"><b>Lugar de origen:</b> @Model.LugarOrigen</li>
+            @if (Model.FechaCaptura != null)
+            {
+                <li class="list-group-item"><b>Fecha de captura:</b> @Model.FechaCaptura.Value.ToString("dd/MM/yyyy")</li>
+            }
+            @if (Model.FechaIngreso != null)
+            {
+                <li class="list-group-item"><b>Fecha de ingreso:</b> @Model.FechaIngreso.Value.ToString("dd/MM/yyyy")</li>
+            }
+            <li class="list-group-item"><b>Peso:</b> @Model.Peso kg</li>
+        </ul>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-header fw-bold">Calidad</div>
+        <ul class="list-group list-group-flush">
+            @if (cal != null)
+            {
+                <li class="list-group-item"><b>Resultado:</b> @cal.Resultado</li>
+                <li class="list-group-item"><b>Color / Olor / Textura:</b> @cal.Color / @cal.Olor / @cal.Textura</li>
+            }
+            else
+            {
+                <li class="list-group-item text-muted">Sin registro</li>
+            }
+        </ul>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-header fw-bold">Conservación</div>
+        <ul class="list-group list-group-flush">
+            @if (con != null)
+            {
+                <li class="list-group-item"><b>Método:</b> @con.MetodoConservacion</li>
+                <li class="list-group-item"><b>Temperatura:</b> @con.Temperatura °C</li>
+            }
+            else
+            {
+                <li class="list-group-item text-muted">Sin registro</li>
+            }
+        </ul>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-header fw-bold">Almacenamiento</div>
+        <ul class="list-group list-group-flush">
+            @if (alm != null)
+            {
+                <li class="list-group-item"><b>Tipo:</b> @alm.TipoAlmacenamiento</li>
+                <li class="list-group-item"><b>Ubicación:</b> @alm.Ubicacion</li>
+            }
+            else
+            {
+                <li class="list-group-item text-muted">Sin registro</li>
+            }
+        </ul>
+    </div>
+</div>
+</body>
+</html>

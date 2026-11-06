@@ -1,0 +1,81 @@
+﻿@{
+    bool esAcceso = Context.Request.Path.StartsWithSegments("/Cuenta");
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DeepSea Intelligence</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/mar.css" asp-append-version="true" />
+</head>
+<body>
+    @if (esAcceso)
+    {
+        <div class="fondo-mar">
+            <div class="sol"></div>
+            <span class="nube n1">☁️</span>
+            <span class="nube n2">☁️</span>
+            <span class="barco">⛵</span>
+            <span class="pez-nada p1">🐠</span>
+            <span class="pez-nada p2">🐋</span>
+            <span class="pez-nada p3">🐟</span>
+            <span class="burbuja"></span>
+            <span class="burbuja"></span>
+            <span class="burbuja"></span>
+            <span class="burbuja"></span>
+            <div class="ola o3"></div>
+            <div class="ola o2"></div>
+            <div class="ola o1"></div>
+
+            <div class="marca-login">
+                <span class="pez">🐟</span>
+                <h1>DeepSea Intelligence</h1>
+                <p>Gestión y control de recursos marinos</p>
+            </div>
+
+            <div class="tarjeta-login">
+                @RenderBody()
+            </div>
+        </div>
+    }
+    else
+    {
+        <nav class="navbar barra-movil d-md-none">
+            <div class="container-fluid">
+                <span class="fw-bold">🌊 DeepSea Intelligence</span>
+                <button class="btn btn-outline-light" data-bs-toggle="offcanvas" data-bs-target="#menuMovil">☰</button>
+            </div>
+        </nav>
+
+        <div class="offcanvas offcanvas-start menu-lateral" id="menuMovil">
+            <div class="offcanvas-header">
+                <h5>🌊 DeepSea Intelligence</h5>
+                <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <partial name="_Menu" />
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <aside class="col-md-2 d-none d-md-block pt-3 menu-lateral" style="min-height:100vh">
+                    <div class="logo text-center fw-bold">🌊 DeepSea<br />Intelligence</div>
+                    <partial name="_Menu" />
+                </aside>
+                <main class="col-md-10 p-3 p-md-4">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+    }
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

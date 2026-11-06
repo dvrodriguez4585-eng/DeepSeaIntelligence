@@ -1,0 +1,30 @@
+@model IEnumerable<DeepSeaIntelligence.Controllers.FilaInventario>
+@{ ViewData["Title"] = "Inventario"; }
+
+<h2>Inventario</h2>
+
+<form method="get" class="d-flex gap-2 mb-3">
+    <input name="buscar" class="form-control" placeholder="Buscar..." />
+    <button class="btn btn-outline-dark">Buscar</button>
+</form>
+
+<div class="table-responsive">
+<table class="table table-bordered">
+    <thead class="table-light">
+        <tr><th>Producto</th><th>Recibido</th><th>Vendido</th><th>Disponible</th><th>Ubicación</th><th>Estado</th></tr>
+    </thead>
+    <tbody>
+    @foreach (var f in Model)
+    {
+        <tr>
+            <td>@f.Producto</td>
+            <td>@f.Recibido kg</td>
+            <td>@f.Vendido kg</td>
+            <td><b>@f.Disponible kg</b></td>
+            <td>@f.Ubicacion</td>
+            <td><span class="badge @(f.Disponible > 0 ? "bg-success" : "bg-secondary")">@f.Estado</span></td>
+        </tr>
+    }
+    </tbody>
+</table>
+</div>

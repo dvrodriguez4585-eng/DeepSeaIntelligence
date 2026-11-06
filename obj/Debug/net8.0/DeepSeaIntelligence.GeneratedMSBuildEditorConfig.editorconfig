@@ -1,0 +1,151 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DeepSeaIntelligence
+build_property.RootNamespace = DeepSeaIntelligence
+build_property.ProjectDir = C:\Users\pasto\Documents\DeepSeaIntelligence\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\pasto\Documents\DeepSeaIntelligence
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Almacenamientos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxtYWNlbmFtaWVudG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Almacenamientos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxtYWNlbmFtaWVudG9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Almacenamientos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxtYWNlbmFtaWVudG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Calidades/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsaWRhZGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Calidades/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsaWRhZGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Calidades/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsaWRhZGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Clientes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Clientes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Clientes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Comercializaciones/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tZXJjaWFsaXphY2lvbmVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Comercializaciones/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tZXJjaWFsaXphY2lvbmVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Comercializaciones/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tZXJjaWFsaXphY2lvbmVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Conservaciones/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc2VydmFjaW9uZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Conservaciones/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc2VydmFjaW9uZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Conservaciones/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc2VydmFjaW9uZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Cuenta/Entrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VlbnRhXEVudHJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Cuenta/Registro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VlbnRhXFJlZ2lzdHJvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Inventarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Productos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Productos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Productos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Shared/_Menu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NZW51LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Trazabilidad/Ver.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhemFiaWxpZGFkXFZlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Ventas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Ventas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pasto/Documents/DeepSeaIntelligence/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-9he39h1nyu

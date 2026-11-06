@@ -1,0 +1,18 @@
+@model DeepSeaIntelligence.Models.Cliente
+@{ ViewData["Title"] = "Nuevo cliente"; }
+
+<h2>Nuevo cliente</h2>
+
+<form method="post" class="row g-3" style="max-width:700px">
+    <div class="col-12"><label class="form-label">Nombre</label><input asp-for="NombreCliente" class="form-control" /></div>
+    <div class="col-md-4"><label class="form-label">Tipo de documento</label>
+        <select asp-for="TipoIdentificacion" class="form-select"><option>CC</option><option>NIT</option><option>CE</option></select></div>
+    <div class="col-md-8"><label class="form-label">Número de documento</label><input asp-for="NumeroIdentificacion" class="form-control" /></div>
+    <div class="col-12"><label class="form-label">Dirección</label><input asp-for="Direccion" class="form-control" /></div>
+    <div class="col-md-6"><label class="form-label">Teléfono</label><input asp-for="Telefono" class="form-control" /></div>
+    <div class="col-md-6"><label class="form-label">Correo</label><input asp-for="Email" class="form-control" /></div>
+    <div class="col-12">
+        <a class="btn btn-outline-dark" asp-action="Index">Cancelar</a>
+        <button class="btn btn-dark">Guardar</button>
+    </div>
+</form>

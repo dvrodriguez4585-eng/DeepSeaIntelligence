@@ -1,0 +1,23 @@
+@model DeepSeaIntelligence.Models.Conservacion
+@{ ViewData["Title"] = "Registrar conservación"; }
+
+<h2>Registrar conservación</h2>
+
+<form method="post" class="row g-3" style="max-width:700px">
+    <div class="col-12"><label class="form-label">Producto</label>
+        <select asp-for="IdRecepcion" asp-items="(SelectList)ViewBag.Productos" class="form-select"><option value="">Seleccionar...</option></select></div>
+    <div class="col-md-6"><label class="form-label">Método de conservación</label>
+        <select asp-for="MetodoConservacion" class="form-select"><option>Hielo</option><option>Salazón</option><option>Congelado</option></select></div>
+    <div class="col-md-6"><label class="form-label">Temperatura (°C)</label>
+        <input asp-for="Temperatura" class="form-control" /></div>
+    <div class="col-md-6"><label class="form-label">Fecha</label>
+        <input asp-for="FechaConservacion" type="date" class="form-control" /></div>
+    <div class="col-md-6"><label class="form-label">Duración estimada (horas)</label>
+        <input asp-for="DuracionEstimada" class="form-control" /></div>
+    <div class="col-12"><label class="form-label">Responsable</label>
+        <input asp-for="Responsable" class="form-control" /></div>
+    <div class="col-12">
+        <a class="btn btn-outline-dark" asp-action="Index">Cancelar</a>
+        <button class="btn btn-dark">Guardar</button>
+    </div>
+</form>

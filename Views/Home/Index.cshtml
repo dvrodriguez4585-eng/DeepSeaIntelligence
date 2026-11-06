@@ -1,0 +1,55 @@
+﻿@model IEnumerable<DeepSeaIntelligence.Models.ProductoMarino>
+@{ ViewData["Title"] = "Inicio"; var alertas = (List<string>)ViewBag.Alertas; }
+
+<h2>Inicio</h2>
+
+<div class="row g-3 mb-4">
+    <div class="col-6 col-md-3"><div class="card"><div class="card-body">
+        <small class="text-muted">PRODUCTOS</small><div class="fs-3 fw-bold">@ViewBag.TotalProductos</div></div></div></div>
+    <div class="col-6 col-md-3"><div class="card"><div class="card-body">
+        <small class="text-muted">STOCK DISPONIBLE</small><div class="fs-3 fw-bold">@ViewBag.Stock kg</div></div></div></div>
+    <div class="col-6 col-md-3"><div class="card"><div class="card-body">
+        <small class="text-muted">VENTAS DEL MES</small><div class="fs-3 fw-bold">$@(((double)ViewBag.VentasMes).ToString("N0"))</div></div></div></div>
+    <div class="col-6 col-md-3"><div class="card"><div class="card-body">
+        <small class="text-muted">ALERTAS</small><div class="fs-3 fw-bold">@alertas.Count</div></div></div></div>
+</div>
+
+<div class="row g-3 mb-4">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header fw-bold">ÚLTIMAS RECEPCIONES</div>
+            <div class="table-responsive">
+                <table class="table mb-0">
+                    <thead><tr><th>Producto</th><th>Peso</th><th>Proveedor</th><th>Fecha</th></tr></thead>
+                    <tbody>
+                    @foreach (var p in Model)
+                    {
+                        <tr>
+                            <td>@p.ProductoRecibido</td>
+                            <td>@p.Peso kg</td>
+                            <td>@p.NombreProveedor</td>
+                            <td>@((p.FechaCaptura ?? p.FechaIngreso)?.ToString("dd/MM/yyyy"))</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header fw-bold">ALERTAS DE CONSERVACIÓN</div>
+            <div class="card-body">
+                @if (alertas.Count == 0) { <span class="text-success">Sin alertas ✅</span> }
+                @foreach (var a in alertas) { <div class="alert alert-warning py-2">@a</div> }
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex flex-wrap gap-2">
+    <a class="btn btn-dark" href="/Productos/Create">+ Producto</a>
+    <a class="btn btn-dark" href="/Productos">Recepciones</a>
+    <a class="btn btn-dark" href="/Ventas/Create">+ Venta</a>
+    <a class="btn btn-outline-dark" href="/Productos">Consultar trazabilidad</a>
+</div>
