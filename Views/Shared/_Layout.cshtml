@@ -9,6 +9,9 @@
     <title>@ViewData["Title"] - DeepSea Intelligence</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/mar.css" asp-append-version="true" />
+    <link rel="manifest" href="~/manifest.json" />
+    <meta name="theme-color" content="#062a4a" />
+    <link rel="apple-touch-icon" href="~/icon-192.png" />
 </head>
 <body>
     @if (esAcceso)
@@ -76,6 +79,11 @@
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
