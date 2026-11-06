@@ -27,9 +27,18 @@ namespace DeepSeaIntelligence.Controllers
         }
 
         public async Task<IActionResult> Index()
-            => View(await _db.Almacenamientos.Include(a => a.Recepcion).OrderByDescending(a => a.IdAlmacenamiento).ToListAsync());
+        {
+            var lista = await _db.Almacenamientos.OrderByDescending(a => a.IdAlmacenamiento).ToListAsync();
+            var nombres = await _db.Productos.ToDictionaryAsync(p => p.IdRecepcion, p => p.ProductoRecibido);
+            ViewBag.Nombres = nombres;
+            return View(lista);
+        }
 
-        public async Task<IActionResult> Create() { await CargarProductos(); return View(new Almacenamiento()); }
+        public async Task<IActionResult> Create()
+        {
+            await CargarProductos();
+            return View(new Almacenamiento());
+        }
 
         [HttpPost]
         public async Task<IActionResult> Create(Almacenamiento a)

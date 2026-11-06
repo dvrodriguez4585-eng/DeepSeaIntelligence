@@ -1,5 +1,8 @@
 @model IEnumerable<DeepSeaIntelligence.Models.Almacenamiento>
-@{ ViewData["Title"] = "Almacenamiento"; }
+@{
+    ViewData["Title"] = "Almacenamiento";
+    var nombres = (Dictionary<int, string>)ViewBag.Nombres;
+}
 
 <h2>Gestión de Almacenamiento</h2>
 <a class="btn btn-dark mb-3" asp-action="Create">+ Nuevo almacenamiento</a>
@@ -14,7 +17,7 @@
     {
         <tr>
             <td>@a.IdAlmacenamiento</td>
-            <td>@a.Recepcion?.ProductoRecibido</td>
+            <td>@(nombres.GetValueOrDefault(a.IdRecepcion, "(sin producto)"))</td>
             <td>@a.TipoAlmacenamiento</td>
             <td>@a.Ubicacion</td>
             <td>@a.FechaAlmacenamiento.ToString("dd/MM/yyyy")</td>
